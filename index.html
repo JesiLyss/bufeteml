@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> M&L</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/logos--formkeep 1.png">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/Pen tool.png" alt="Estudio M&L">
+            <span>Bufete Jurídico Méndez & Lozano</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#team">Equipo</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <img src="./img/logos--formkeep 1.png" alt="Icono">
+            <br>
+            <p>En el Bufete Jurídico Méndez y Lozano,nos enorgullecemos de ofrecer soluciones legales innovadoras y personalizadas.</p>
+            <p>Nuestro compromiso con la excelencia y la dedicación a nuestros clientes es firme. Contamos con un equipo de abogados altamente capacitados, listos para proporcionar asesoramiento y representación en diversas áreas del derecho.
+            </p>
+           
+        </section>
+        <section id="services" class="services">
+            <h2>Servicios</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Consultoría Legal</h3>
+                    <p>Proveemos asesoría legal en diversas áreas del derecho.</p>
+                </div>
+                <div class="card">
+                    <h3>Representación Legal</h3>
+                    <p>Defendemos tus intereses en procesos judiciales y administrativos.</p>
+                </div>
+                <div class="card">
+                    <h3>Asesoría Corporativa</h3>
+                    <p>Apoyamos a empresas en sus necesidades legales corporativas.</p>
+                </div>
+            </div>
+        </section>
+        <section id="team" class="team">
+            <h2>Equipo</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Lic. Abel Lozano</h3>
+                    <p>Especialista en derecho civil y comercial.</p>
+                </div>
+                <div class="card">
+                    <h3>Lic. Gabriela Méndez</h3>
+                    <p>Experta en derecho laboral y de familia.</p>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about">
+            <h2>Sobre el Bufete</h2>
+            <div class="about-content">
+                <h3>Nuestra Misión</h3>
+                <p>Nuestra misión es brindar un servicio legal eficiente y adaptado a las necesidades de cada cliente. Nos esforzamos por construir relaciones de confianza basadas en la ética, la transparencia y el respeto mutuo.</p>
+                <h3>Nuestros Valores</h3>
+                <ul>
+                    <li><strong>Integridad:</strong> Actuamos con honestidad y profesionalismo en todas nuestras interacciones.</li>
+                    <li><strong>Excelencia:</strong> Nos comprometemos a ofrecer servicios legales de la más alta calidad.</li>
+                    <li><strong>Compromiso:</strong> Nos dedicamos a defender los intereses de nuestros clientes con pasión y determinación.</li>
+                    <li><strong>Confidencialidad:</strong> Garantizamos la máxima discreción y protección de la información de nuestros clientes.</li>
+                </ul>
+              
+                 <h3>Nuestro Enfoque</h3>
+                <p>Entendemos que cada caso es único. Por ello, adoptamos un enfoque personalizado, analizando detalladamente cada situación para ofrecer soluciones jurídicas precisas y efectivas. Nos enorgullece nuestra capacidad para adaptarnos a las necesidades cambiantes del entorno legal y nuestra orientación a resultados.</p>
+            </div>
+        </section>
+        <hr>
+        <section id="contact" class="contact">
+            <h2>Contacto</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
