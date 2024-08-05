@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        emailjs.send('service_id', 'template_id', {
+        emailjs.send('service_iwn33e3', 'template_5k8ujk9', {
             from_name: name,
             from_email: email,
             message: message
-        }, 'user_id')
+        }, '88vx44w2fGmxMApMr')
         .then(response => {
             alert(`Gracias por contactarnos, ${name}. Hemos recibido tu mensaje y te responderemos a la brevedad.`);
             form.reset();
