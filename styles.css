@@ -173,3 +173,57 @@ button[type="submit"]:hover {
     width: 1em;
     margin-left: -1em;
 }
+/* Añade tus estilos existentes aquí */
+
+/* Estilos para el menú responsivo */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav ul.active {
+        display: flex;
+    }
+    
+    .menu-icon {
+        display: flex;
+    }
+    
+    nav ul li {
+        padding: 10px 0;
+        border-top: 1px solid #ccc;
+    }
+    
+    nav ul li a {
+        color: #333;
+        font-weight: bold;
+    }
+}
