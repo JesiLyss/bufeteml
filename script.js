@@ -1,22 +1,34 @@
-// scripts.js
-
 document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.card');
-    
-    cards.forEach(card => {
-        card.addEventListener('click', () => {
-            alert(`Más información sobre ${card.querySelector('h3').textContent}`);
-        });
-    });
-
     const form = document.querySelector('form');
     form.addEventListener('submit', (event) => {
         event.preventDefault();
-        const name = form.name.value;
-        const email = form.email.value;
-        const message = form.message.value;
 
-        alert(`Gracias por contactarnos, ${name}. Hemos recibido tu mensaje y te responderemos a la brevedad.`);
-        form.reset();
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+
+        if (name === '' || email === '' || message === '') {
+            alert('Por favor, completa todos los campos.');
+            return;
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert('Por favor, ingresa una dirección de correo electrónico válida.');
+            return;
+        }
+
+        emailjs.send('service_id', 'template_id', {
+            from_name: name,
+            from_email: email,
+            message: message
+        }, 'user_id')
+        .then(response => {
+            alert(`Gracias por contactarnos, ${name}. Hemos recibido tu mensaje y te responderemos a la brevedad.`);
+            form.reset();
+        })
+        .catch(error => {
+            alert('Hubo un problema al enviar el mensaje.');
+        });
     });
 });
