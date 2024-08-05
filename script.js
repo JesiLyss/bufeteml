@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('form');
+    const menuIcon = document.getElementById('menu-icon');
+    const menu = document.getElementById('menu');
+
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
@@ -31,18 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Hubo un problema al enviar el mensaje.');
         });
     });
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const menuIcon = document.getElementById('menu-icon');
-    const menu = document.getElementById('menu');
-
-    menuIcon.addEventListener('click', () => {
-        menu.classList.toggle('active');
-    });
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const menuIcon = document.getElementById('menu-icon');
-    const menu = document.getElementById('menu');
 
     menuIcon.addEventListener('click', () => {
         menu.classList.toggle('active');
